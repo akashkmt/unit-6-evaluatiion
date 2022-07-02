@@ -39,9 +39,8 @@ function Bookings() {
     
   return (
     <div>
-        {
-            allBookings?.map((movie, index)=>{
-                return <div key={index}>
+        
+             <div>
                     <table>
                         <thead>
                             <tr>
@@ -52,17 +51,21 @@ function Bookings() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{movie.movie_id}</td>
-                                <td>{movie.name}</td>
-                                <td>{movie.seat}</td>
-                                <td><button onClick={()=>{cancelBooking(movie.id)}}>Cancel Booking</button></td>
-                            </tr>
+                    {allBookings?.map((movie, index)=> {
+                        return (
+                        <tr>
+                        <td>{movie.movie_id}</td>
+                        <td>{movie.name}</td>
+                        <td>{movie.seat}</td>
+                        <td><button onClick={()=>{cancelBooking(movie.id)}}>Cancel Booking</button></td>
+                    </tr>)}
+                    )}
+
                         </tbody>
                     </table>
                 </div>
-            })
-        }
+            
+        
     </div>
   )
 }

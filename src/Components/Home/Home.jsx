@@ -29,11 +29,11 @@ function Home() {
     }, [isLoggedIn]);
     
   return (
-    <div>
+    <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', padding:'20px', gap:'20px'}}>
         {
             allMovies?.map((movie, index)=>{
-                return <div key={index}>
-                    <img width={200} src={movie.poster_path} alt="" />
+                return <div style={{border:'1px solid gray',margin:"auto", width:'350px',padding:'10px'}} key={index}>
+                    <img width={'100%'} src={movie.poster_path} alt="" />
                     <h3>{movie.title}</h3>
                     <Link to={`/movie/${movie.id}`}>more details</Link>
                 </div>

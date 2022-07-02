@@ -12,11 +12,11 @@ function Navbar() {
         dispatch(toggleAuth());
     }
   return (
-    <div>
-        <Link to="/">Home</Link>
-        <Link to="/bookings">Bookings</Link>
+    <div style={{display:"flex", gap:"20px", justifyContent:"center", padding:'20px', backgroundColor:'whitesmoke',marginBottom:'10px'}}>
+        <Link style={{color:'blue',textDecoration:'none'}} to="/">Home</Link>
+        <Link style={{color:'blue',textDecoration:'none'}} to="/bookings">Bookings</Link>
         {
-            !isLoggedIn ? (<Link to="/login">Login</Link>) : <button onClick={handleLogout}>Logout</button>
+            !isLoggedIn ? (<Link style={{color:'blue',textDecoration:'none'}} to="/login">Login</Link>) : <button style={{border:'none',fontSize:'16px', cursor:'pointer',color:'blue'}} onClick={handleLogout}>Logout</button>
         }
     </div>
   )

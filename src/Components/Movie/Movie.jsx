@@ -65,8 +65,8 @@ function Movie() {
     });
   },[id]);
   return (
-    <div>
-      <img width={200} src={movie.poster_path} alt="" />
+    <div style={{border:'1px solid gray',margin:"auto", width:'350px',padding:'10px'}}>
+      <img width={'100%'} src={movie.poster_path} alt="" />
       <h3>{movie.title}</h3>
       {!booked ? (
         <div>
@@ -74,6 +74,7 @@ function Movie() {
           <input type="text" placeholder="Enter Seat Number" value={seat} onChange={(e)=>{setSeat(e.target.value)}} />
         </div>
       ) : null}
+      <br />
       {booked ? (
         <button onClick={handleShowBooking}>Show Booking Details</button>
       ) : (
