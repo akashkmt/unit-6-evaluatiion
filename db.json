@@ -129,10 +129,10 @@
       "seat": "A2"
     },
     {
-      "name": "Akash",
-      "seat": "A1",
-      "movie_id": "4",
-      "id": 3
+      "name": "akash",
+      "seat": "s1",
+      "movie_id": "2",
+      "id": 2
     }
   ]
 }

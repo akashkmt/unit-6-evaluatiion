@@ -38,9 +38,9 @@ function Bookings() {
     },[])
     
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
         
-             <div>
+             <div style={{textAlign:'center'}}>
                     <table>
                         <thead>
                             <tr>
@@ -53,7 +53,7 @@ function Bookings() {
                         <tbody>
                     {allBookings?.map((movie, index)=> {
                         return (
-                        <tr>
+                        <tr key={index}>
                         <td>{movie.movie_id}</td>
                         <td>{movie.name}</td>
                         <td>{movie.seat}</td>
