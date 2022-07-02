@@ -1,7 +1,7 @@
 import { TOGGLE_AUTH } from "./action";
 
 const initialState = {
-    isLoggedIn: true,
+    isLoggedIn: false,
 }
 
 const loginReducer = (state = initialState, action) => {
